@@ -107,7 +107,6 @@ p {
   color: #404bbf;
 }
 
-/* Декоративное подчеркивание только для текущей страницы */
 .link-nav.current::after {
   content: "";
   position: absolute;
@@ -145,9 +144,6 @@ p {
 
 /*----- main----- */
 
-/* flex-direction: column; /* Элементы друг под другом */
-/* align-items: center;    /* Центрируем по горизонтали */
-/* text-align: center;     /* Центрируем текст внутри h1 */
 .hero-background {
   display: flex;
   flex-direction: column;
@@ -159,9 +155,7 @@ p {
     linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url("../images/herobackground.peopleoffice.jpg");
 
-  /* Ограничиваем ширину блока по центру */
   max-width: 1440px;
-  /* Центрируем сам блок на очень широких экранах */
   margin: 0 auto;
 
   background-size: cover;
@@ -171,7 +165,6 @@ p {
 
 .hero-text {
   text-align: center;
-  /* Чтобы текст переносился как в макете */
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
@@ -187,7 +180,6 @@ p {
 .button {
   display: block;
   padding: 16px 32px;
-  /* Дополнительная страховка центрирования */
   margin: 0 auto;
   border: none;
   border-radius: 4px;
@@ -212,7 +204,6 @@ p {
   background-color: #404bbf;
 }
 
-/* задаем внешние отступы сверху и снизу */
 .our-features {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -238,8 +229,6 @@ p {
   padding: 0;
 }
 
-/*Элемент списка: рассчитываем ширину, чтобы их влезло ровно 4 */
-/*(100% - (количество зазоров * размер зазора)) / количество элементов */
 .features-item {
   width: calc((100% - 3 * 24px) / 4);
 }
@@ -259,8 +248,7 @@ p {
   fill: #2e2f42;
 }
 
-/* Заголовок внутри карточки */
-/* Небольшой отступ от заголовка до текста */
+
 .our-features-title {
   margin-bottom: 8px;
   font-weight: 500;
@@ -270,7 +258,7 @@ p {
   color: #2e2f42;
 }
 
-/*Текст параграфа */
+
 .features-text {
   font-size: 16px;
   line-height: 1.5;
@@ -300,7 +288,6 @@ p {
   text-align: center;
 }
 
-/* 3. Список карточек (ul): выстраиваем в одну строку */
 .list-our-team {
   display: flex;
   gap: 24px;
@@ -312,9 +299,7 @@ p {
   background-color: #fff;
   text-align: center;
   width: calc((100% - 3 * 24px) / 4);
-  /* скругляет только нижние углы элемента (левый и правый) на 4 пикселя, оставляя верхние углы острыми (0px). */
   border-radius: 0px 0px 4px 4px;
-  /* добавляет тень к элементу */
   box-shadow:
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -392,11 +377,8 @@ p {
 
 .portfolio-list {
   display: flex;
-  /* Позволяет карточкам падать на новый ряд */
   flex-wrap: wrap;
-  /* Расстояние между колонками */
   column-gap: 24px;
-  /* Расстояние между рядами по вертикали */
   row-gap: 48px;
   margin: 0;
   padding: 0;
@@ -404,11 +386,9 @@ p {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
-  /* 1. Добавляем плавный переход для тени */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*  2. Добавляем саму тень при наведении */
 
 .portfolio-list-item:hover,
 .portfolio-list-item:focus {
@@ -433,13 +413,10 @@ p {
   color: #f4f4fd;
   padding: 40px 32px;
 
-  /* Начальное положение — полностью внизу за пределами видимости */
   transform: translateY(100%);
-  /* Анимация только трансформации */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Появление при ховере на ВСЮ карточку */
 .portfolio-list-item:hover .portfolio-overlay,
 .portfolio-list-item:focus .portfolio-overlay {
   transform: translateY(0);
@@ -466,7 +443,6 @@ p {
   border-top: none;
 }
 
-/* Убираем лишний margin у параграфа, чтобы padding снизу отработал точно 32px */
 .our-portfolio-article {
   margin: 0;
   font-size: 16px;
@@ -482,10 +458,8 @@ p {
   padding: 100px 0;
 }
 
-/* 2. Контейнер: выстраиваем логотип и текст в колонку */
 .footer-container {
   display: flex;
-  /* Чтобы логотип и заголовок соцсетей выровнялись по одной линии */
   align-items: baseline;
 }
 
@@ -494,9 +468,7 @@ p {
 }
 
 .footer-logo {
-  /* Позволяет margin-bottom работать правильно */
   display: inline-block;
-  /* Тот самый отступ 16px до текста */
   margin-bottom: 16px;
   padding: 0;
 }
@@ -511,7 +483,6 @@ p {
   font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  /* Ключевой параметр для переноса строк как в макете */
   max-width: 264px;
   margin: 0;
 }
@@ -552,12 +523,11 @@ p {
 }
 
 .footer-social-icon {
-  /* цвет иконок */
   fill: #f4f4fd;
 }
 
 .footer-subscribe {
-  margin-left: auto;
+  margin-left: 80px;
 }
 
 .footer-subscribe-title {
@@ -571,7 +541,7 @@ p {
 
 .footer-subscribe-form {
   display: flex;
-  gap: 24px; /* Расстояние между инпутом и кнопкой */
+  gap: 24px; 
 }
 
 .footer-subscribe-input {
@@ -670,38 +640,32 @@ p {
 }
 
 .modal-close-btn {
-  /* Позиционируем относительно родителя .modal */
   position: absolute;
   top: 24px;
   right: 24px;
-  /* Делаем кнопку идеально круглой */
   width: 24px;
   height: 24px;
   border-radius: 50%;
 
-  /* Центрируем иконку-крестик внутри круга */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Оформление фона и рамки */
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0; /* Сбрасываем внутренние отступы кнопки */
+  padding: 0; 
   cursor: pointer;
 
-  /* Плавные переходы для ховера */
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Эффект при наведении */
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
-  fill: #ffffff; /* Крестик станет белым */
+  fill: #ffffff; 
 }
 
 .modal-close-icon {
@@ -709,7 +673,7 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Изменение цвета иконки ПРИ наведении на КНОПКУ */
+
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: #ffffff;
@@ -746,8 +710,8 @@ p {
 
 /* --- Textarea --- */
 .modal-checkbox-label {
-  display: flex; /* Выравнивает иконку и текст в ряд */
-  align-items: center; /* Центрирует галочку по высоте текста */
+  display: flex; 
+  align-items: center; 
 
   font-size: 12px;
   line-height: 1.17;
@@ -755,11 +719,10 @@ p {
   color: #8e8f99;
 }
 
-/* Добавь небольшой отступ для ссылки, если нужно */
 .privacy-link {
   color: #4d5ae5;
   text-decoration: underline;
-  margin-left: 4px; /* Чтобы "the" и "Privacy" не слипались */
+  margin-left: 4px; 
 }
 
 .modal-custom-checkbox {
@@ -774,7 +737,6 @@ p {
   /* Важно: фон прозрачный */
   background-color: transparent;
 
-  /* Добавляем transition для плавности */
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -791,7 +753,7 @@ p {
 }
 
 .modal-checkbox:checked + .modal-checkbox-label .modal-check-icon {
-  fill: #f4f4fd; /* Галочка становится белой и "проявляется" */
+  fill: #f4f4fd; 
 }
 
 .modal-title {
@@ -829,7 +791,7 @@ p {
   border-radius: 4px;
   background-color: transparent;
   padding-left: 38px;
-  outline: transparent; /* Убираем стандартную рамку браузера */
+  outline: transparent; 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -843,16 +805,13 @@ p {
   top: 50%;
   transform: translateY(-50%);
   fill: #2e2f42;
-  /* Плавный переход для иконки */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Изменение цвета иконки при фокусе на инпуте */
 .modal-input:focus + .modal-icon {
   fill: #4d5ae5;
 }
 
-/* ---Поле комментариев */
 
 .modal-comment-wrap {
   margin-bottom: 16px;
@@ -862,7 +821,7 @@ p {
   display: block;
   width: 100%;
   height: 120px;
-  resize: none; /* Требование C11 (запрет растягивания) */
+  resize: none; 
 
   font-size: 12px;
   line-height: 1.17;
@@ -882,19 +841,15 @@ p {
 }
 
 .modal-checkbox-wrap {
-  /* Расстояние от текста политики до кнопки Send */
   margin-bottom: 24px;
 }
 
 .modal-submit-btn {
   display: block;
-  /* Центрируем кнопку горизонтально */
   margin: 0 auto;
-  /* Размеры и стили из макета */
   min-width: 169px;
   height: 56px;
 
-  /* Оформление */
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
@@ -904,6 +859,5 @@ p {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  /* Плавный переход для ховера */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
