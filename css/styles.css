@@ -461,6 +461,8 @@ p {
 .footer-container {
   display: flex;
   align-items: baseline;
+  gap: 120px;
+
 }
 
 .footer-info {
@@ -527,7 +529,7 @@ p {
 }
 
 .footer-subscribe {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .footer-subscribe-title {
