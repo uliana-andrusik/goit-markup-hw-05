@@ -461,9 +461,7 @@ p {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 120px;
-
-}
+  }
 
 .footer-info {
   margin-right: 120px;
